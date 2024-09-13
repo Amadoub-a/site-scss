@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>&Eacute;valuation - Majestic cin&eacute;</title>
+    <meta name="description"
+        content="Majestic Cine offre une expérience cinématographique unique, alliant les dernières technologies visuelles et sonores à un confort optimal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+
+<body id="top">
+    <header>
+        <a href="#content" class="screen-reader-text">Aller au contenu principal</a>
+        <div class="container">
+            <nav class="flex-box" aria-labelledby="description-menu">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo du site">
+                    <h1 class="screen-reader-text">
+                        Majestic cin&eacute;
+                    </h1>
+                </a>
+                <!-- description du menu de navigation -->
+				<span id="description-menu" class="screen-reader-text">
+					Voici le menu de navigation.<br>
+					Accueil, Salles, Billetterie, Evaluation, Offres, Tarifs et infos<br>
+                    Nous vous etes au menu Evaluation.
+				</span>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Salles</a></li>
+                    <li><a href="#">Billetterie</a></li>
+                    <li class="lien-active"><a href="evaluations.html">&Eacute;valuation</a></li>
+                    <li><a href="#">Offres</a></li>
+                    <li><a href="#">Tarifs et infos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="content">
+		<div class="container">
+            <h2>&Eacute;valuation</h2>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="index.html">Accueil</a><span>→</span></li>
+                    <li>&Eacute;valuation</li>
+                </ul>
+            </div>
+            <div class="form-box">
+                 <!-- description du formulaire -->
+				<span id="description-form" class="screen-reader-text">
+					Voici le formulaire d'evaluation des films ou serie.<br>
+					Les champs sont les suivants : nom, adresse courielle, age, titre du film<br>
+					Ensuite on a : chois de la categorie (film ou serie), evaluation du film (excellent, tres bien, bien, moyen ou navet), puis commentaire<br>
+				</span>
+
+                <h3>Les <span>*</span> signifient que le champ est obligatoire</h3>
+                <form method="post" action="mailto:amadoukouyate994@gmail.com" aria-labelledby="description-form">
+                    <div class="grid-2-column">
+                        <fieldset>
+                            <legend>Informations du film</legend>
+                            <div>
+                                <label for="nom">Nom du critique  <span>*</span> </label>
+                                <input type="text" name="nom" id="nom" placeholder="Nom du critique" required>
+                            </div>
+                            <div>
+                                <label for="courriel">E-mail <span>*</span> </label>
+                                <input type="email" name="courriel" id="courriel" placeholder="Adresse courrielle" required>
+                            </div>
+                            <div>
+                                <label for="age">Âge  <span>*</span> </label>
+                                <input type="number" min="1" name="age" id="age" placeholder="20" required>
+                            </div>
+                            <div>
+                                <label for="titre">Titre du film / s&eacute;rie  <span>*</span></label>
+                                <input type="text" name="titre" id="titre" placeholder="Titre du film ou du rérie" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>&Eacute;valuation du film</legend>
+                            <div>
+                                <label for="categorie"> Cat&eacute;gorie <span>*</span></label>
+                                <select name="categorie" id="categorie" required>
+                                    <option value="" selected disabled> Veuillez choisir une cat&eacute;gorie </option>
+                                    <option value="film">Film</option>
+                                    <option value="serie">S&eacute;rie</option>
+                                </select>
+                            </div>
+                            <div>
+                                <fieldset class="evaluation">
+                                    <legend>Évaluation  <span>*</span> :</legend>
+
+                                    <input type="radio" name="evaluation" id="excellent" value="excellent" required>
+                                    <label for="excellent">Excellent</label>
+
+                                    <input type="radio" name="evaluation" id="tres_bien" value="très bien">
+                                    <label for="tres_bien">Très bien </label>
+
+                                    <input type="radio" name="evaluation" id="bien" value="bien">
+                                    <label for="bien">Bien </label>
+
+                                    <input type="radio" name="evaluation" id="moyen" value="moyen ">
+                                    <label for="moyen">Moyen  </label>
+
+                                    <input type="radio" name="evaluation" id="navet" value="navet">
+                                    <label for="navet">C’est un navet!</label>
+                                </fieldset>
+                            </div>
+                            <div>
+                                <label for="textCommentaire">Commentaire <span>*</span></label>
+                                <textarea name="textCommentaire" id="textCommentaire" minlength="5" maxlength="250" placeholder="Minimu 5 caractères" required></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-btn">
+                        <input type="submit" id="envoyer" value="Envoyer">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a class="back-to-top" href="#top" title="Aller en haut de la page">
+            <p class="screen-reader-text">Aller en haut de la page</p>
+        </a>
+    </main>
+    <footer class="flex-box">
+        <span>
+            Amadou KOUYAT&Eacute;
+        </span>
+        <span>
+            ©Copyright 2024 
+        </span>
+        <span>
+			05B - Travail 1 | SASS, Animation CSS 
+		</span>
+    </footer>
+</body>
+
+</html>
